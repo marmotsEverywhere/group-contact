@@ -1,0 +1,28 @@
+<html>
+<head>
+  <title>Group Contact</title>
+  <link rel="stylesheet" media="screen" href="http://handsontable.com/dist/handsontable.full.css">
+  <link rel="stylesheet" media="screen" href="style.css">
+</head>
+<body>
+    <div id="description" class="pane visible clearfix">
+      <img src="screenshot.png" class="screenshot"/>
+      <div id="description-text">
+        <h2>What's this?</h2>
+        <p>This website lets you create a single <strong>contact</strong> for  one-time events which contains all of the participant's numbers.</p>
+        <p> Say, you organize a day trip with some people you don't know. You'd like to be able to call them directly from your phone, but you don't want to litter your address book with contacts you're probably never going to use again. Now you can.</p>
+        <input id="get-started" type="button" value="Let's get started!"/>
+      </div>
+    </div>
+  <div id="data-entry" class="pane">
+    <p>Just enter your contacts below or paste columns from your favourite spreadsheet application. <a id="back">Wait, what?</a></p>
+    <div id="table"></div>
+    <form>
+      <label for="group-name">Group Name:</label>
+      <input id="group-name" type="text" placeholder="Mountainbike Tour" />
+      <input id="generate" type="submit" value="Download contact!"/>
+    </form>
+    </div>
+    <script src="bundle.js"></script>
+</body>
+</html>

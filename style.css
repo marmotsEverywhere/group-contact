@@ -1,0 +1,115 @@
+body {
+  margin: 1em auto;
+  max-width: 820px;
+  font-family: "Helvetica", "Arial", sans-serif;
+  line-height: 1.5;
+  color: #333;
+}
+h1,
+h2,
+strong {
+  color: #222;
+}
+h2 {
+  margin-top: 1em;
+  padding-top: 1em;
+}
+.clearfix {
+  overflow: auto;
+}
+img.screenshot {
+  float:right;
+  height: 550px;
+  object-fit: contain;
+  object-position: 0 0;
+}
+code {
+  background: #eee;
+  padding: 2px 4px;
+  vertical-align: text-bottom;
+  border-radius: 2px;
+}
+a {
+  display: inline-block;
+  color: #347CF6;
+  text-decoration: underline;
+  cursor: pointer;
+}
+a:active {
+  -ms-transform: translate(0, 1px); 
+  -webkit-transform: translate(0, 1px);
+  transform: translate(0, 1px);
+}
+label {
+  font-size: 14px;
+  font-weight: 700;
+}
+.pane {
+  opacity: 0; 
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+.pane.visible {
+  height: 600px;
+  opacity: 1;
+}
+#description {
+  margin: 3em 0 0 0;
+}
+#description-text {
+  position: absolute;
+  bottom: 125px;
+  left: 0;
+  width: 480px;
+}
+#get-started {
+  margin: 1em 0 0 0;
+}
+input {
+  display: inline-block;
+  outline: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input[type="text"] {
+  padding: 9px 10px;
+  margin: 0 5px;
+  font-size: 13px;
+}
+input[type="button"],
+input[type="submit"] {
+  padding: 8px 16px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #347CF6;
+  border: 1px solid #347CF6;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-shadow: 0px 3px 0px 0px #2255AB;
+  -moz-box-shadow: 0px 3px 0px 0px #2255AB;
+  box-shadow: 0px 3px 0px 0px #2255AB;
+}
+input[type="button"]:active,
+input[type="submit"]:active {
+  -ms-transform: translate(0, 1px); 
+  -webkit-transform: translate(0, 1px);
+  transform: translate(0, 1px);
+  -webkit-box-shadow: 0px 2px 0px 0px #2255AB;
+  -moz-box-shadow: 0px 2px 0px 0px #2255AB;
+  box-shadow: 0px 2px 0px 0px #2255AB;  
+}
+#group-name {
+  width: 220px;
+}
+#generate {
+  float: right;
+}
+form {
+  margin: 10px 0;
+}
