@@ -43,6 +43,11 @@ window.onload = () => {
       .map((i) => table.getDataAtRow(i))
       .filter((d) => d[0] && d[1]);
 
+    if (contacts.length <= 0) {
+      alert('Please add a contact first.');
+      return;
+    }
+
     download(vcard(groupName, contacts), `${ groupName }.vcf`)
   }
 
