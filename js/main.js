@@ -15,22 +15,20 @@ function displayPane(id) {
   });
 
   targetPane.classList.add('visible');
-
-  window.location.hash = `#${ id }`;
 }
 
 window.onload = () => {  
   const getStarted = document.getElementById('get-started');
-  const back = document.getElementById('back')
+  const back = document.getElementById('back');
   const generate = document.getElementById('generate');
 
   let table = createTable(document.getElementById('table'));
   getStarted.onclick = () => {
-    displayPane('data-entry');
+    window.location.hash = '#data-entry';
   }
 
   back.onclick = () => {
-    displayPane('description');
+    window.location.hash = '#description';
   }
 
   generate.onclick = (e) => {
@@ -51,8 +49,9 @@ window.onload = () => {
     download(vcard(groupName, contacts), `${ groupName }.vcf`)
   }
 
-  const hash = window.location.hash;
-  if (hash) {
-    displayPane(hash);
-  }
+  displayPane(window.location.hash);
+}
+
+window.onhashchange = () => {
+  displayPane(window.location.hash);
 }
