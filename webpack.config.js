@@ -2,14 +2,14 @@ var path = require('path');
 var webpack = require('webpack');
  
 var providePlugin = new webpack.ProvidePlugin({
-  'Handsontable': '../hot-dist/handsontable.full.js'
+  'Handsontable': '../handsontable/handsontable.full.js'
 });
 
 module.exports = {
   entry: './js/main.js',
-  output: { path: __dirname, filename: 'bundle.js' },
+  output: { path: path.join(__dirname, "static"), filename: 'bundle.js' },
   module: {    
-    noParse: [path.join(__dirname, "../hot-dist/handsontable.full.js")],
+    noParse: [path.join(__dirname, "handsontable/handsontable.full.js")],
     loaders: [
       {
         test: /.js?$/,
